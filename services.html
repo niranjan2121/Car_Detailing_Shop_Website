@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Khan Auto Detailing Houston</title>
+    <meta name="description" content="Explore our premium auto detailing services including Ceramic Coating, Paint Correction, Interior Detailing, and more in Houston, TX.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            background-color: var(--bg-darker);
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .service-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .service-section:nth-child(even) {
+            background-color: var(--bg-card);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .service-grid.reverse .service-text {
+            order: 2;
+        }
+
+        .service-grid.reverse .service-image {
+            order: 1;
+        }
+
+        .service-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-text h2 {
+            color: var(--accent-gold);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            font-family: var(--font-serif);
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-tag span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-family: var(--font-sans);
+        }
+
+        @media (max-width: 992px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .service-grid.reverse .service-text,
+            .service-grid.reverse .service-image {
+                order: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Khan <span>Auto Detailing</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only-btn"><a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Book Now</a></li>
+            </ul>
+
+            <div class="desktop-only-btn">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header reveal">
+        <div class="container">
+            <h1>Our Premium <span>Services</span></h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Comprehensive auto detailing packages designed to restore, enhance, and protect your vehicle.</p>
+        </div>
+    </section>
+
+    <!-- Ceramic Coating -->
+    <section id="ceramic" class="service-section">
+        <div class="container service-grid reveal">
+            <div class="service-text">
+                <h2>Ceramic Coating</h2>
+                <p>The ultimate protection for your vehicle's paint. Our professional-grade ceramic coatings create a hardened, sacrificial layer over your clear coat, providing extreme hydrophobic properties, deep gloss, and lasting protection against chemical washings, UV rays, and environmental fallout.</p>
+                <div class="price-tag">Starting at $799 <span>/ Includes Paint Prep</span></div>
+                <ul class="service-features">
+                    <li>Multi-year protection (Up to 5 years guaranteed)</li>
+                    <li>Intense hydrophobic properties formulation</li>
+                    <li>Scratch and chemical resistance</li>
+                    <li>Unmatched mirror-like gloss and depth</li>
+                    <li>Easier maintenance washing</li>
+                </ul>
+                <a href="booking.html?service=ceramic" class="btn btn-primary">Book Ceramic Coating</a>
+            </div>
+            <div class="service-image">
+                <img src="images/ceramic-coating.png" alt="Applying Ceramic Coating to Car">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interior Detailing -->
+    <section id="interior" class="service-section">
+        <div class="container service-grid reverse reveal">
+            <div class="service-text">
+                <h2>Interior Detailing & Restoration</h2>
+                <p>A pristine driving environment is essential. Our interior detail goes far beyond a simple wipe down. We utilize steam cleaners, hot water extractors, and premium conditioners to sanitize and rejuvenate every inch of your cabin.</p>
+                <div class="price-tag">Starting at $199 <span>/ Varies by vehicle size</span></div>
+                <ul class="service-features">
+                    <li>Thorough vacuuming of seats, carpets, and trunk</li>
+                    <li>Hot water extraction for stain removal</li>
+                    <li>Leather cleaning and pH-balanced conditioning</li>
+                    <li>Plastics and vinyl deep cleaning and UV dressing</li>
+                    <li>Interior glass polishing to streak-free perfection</li>
+                </ul>
+                <a href="booking.html?service=interior" class="btn btn-outline">Book Interior Detail</a>
+            </div>
+            <div class="service-image">
+                <img src="images/interior-cleaning.png" alt="Pristine Car Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Paint Correction -->
+    <section id="paint" class="service-section">
+        <div class="container service-grid reveal">
+            <div class="service-text">
+                <h2>Paint Correction</h2>
+                <p>Does your car's paint look dull or covered in spiderweb-like swirls in the sun? Our paint correction process safely removes a microscopic layer of clear coat to eliminate swirls, scratches, water spots, and oxidation, revealing the true color and clarity underneath.</p>
+                <div class="price-tag">Starting at $399 <span>/ 1-Step Correction</span></div>
+                <ul class="service-features">
+                    <li>Full foam wash and chemical/mechanical decontamination</li>
+                    <li>Multi-stage machine compounding and polishing</li>
+                    <li>Removal of up to 90% of clear coat defects</li>
+                    <li>Restores OEM clarity and reflectivity</li>
+                    <li>Highly recommended prior to Ceramic Coating</li>
+                </ul>
+                <a href="booking.html?service=paint" class="btn btn-primary">Book Paint Correction</a>
+            </div>
+            <div class="service-image">
+                <!-- Using placeholder for paint correction image which will be generated and copied -->
+                <img src="images/paint-correction.png" alt="Paint Correction 50/50 Split" onerror="this.src='images/hero-bg.png'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Headlight Restoration -->
+    <section id="headlight" class="service-section">
+        <div class="container service-grid reverse reveal">
+            <div class="service-text">
+                <h2>Headlight Restoration</h2>
+                <p>Foggy, yellowed headlights not only ruin the appearance of your vehicle but severely diminish nighttime visibility. We permanently restore your lenses to crystal clear factory condition and seal them with ceramic coating to prevent future fading.</p>
+                <div class="price-tag">$99 <span>/ Per Pair</span></div>
+                <ul class="service-features">
+                    <li>Multi-stage wet sanding to remove oxidized plastic</li>
+                    <li>Machine compounding and polishing to optical clarity</li>
+                    <li>Ceramic UV coating application for long-term protection</li>
+                    <li>Improves nighttime visibility and safety instantly</li>
+                </ul>
+                <a href="booking.html?service=headlight" class="btn btn-outline">Book Headlight Restoration</a>
+            </div>
+            <div class="service-image">
+                <img src="images/hero-bg.png" alt="Headlight Restoration Concept" style="filter: brightness(0.7);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content... same as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col reveal">
+                    <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">Khan <span>Auto Detailing</span></a>
+                    <p>Houston's top-tier automotive detailing service. We specialize in paint correction, ceramic coatings, and interior restoration.</p>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#exterior">Exterior Detailing</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Houston, Texas 77002</li>
+                        <li>📞 (800) 555-1234</li>
+                        <li>✉️ info@khandetailing.com</li>
+                        <li class="mt-4" style="color: var(--accent-gold);"><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Khan Auto Detailing Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

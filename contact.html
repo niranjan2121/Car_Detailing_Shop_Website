@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Khan Auto Detailing Houston</title>
+    <meta name="description" content="Contact Khan Auto Detailing in Houston, TX for inquiries, custom quotes, and professional auto care services.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            background-color: var(--bg-darker);
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            background: linear-gradient(to bottom, rgba(5,5,6,0.9), var(--bg-darker)), url('images/hero-bg.png') center/cover no-repeat;
+        }
+
+        .contact-section {
+            padding: 6rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info-card {
+            background-color: var(--bg-card);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            height: 100%;
+        }
+
+        .contact-info-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .info-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+        }
+
+        .info-text p, .info-text a {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .info-text a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-form-container {
+            background-color: var(--bg-card);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: rgba(46, 213, 115, 0.1);
+            border: 1px solid #2ed573;
+            color: #2ed573;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .map-section {
+            width: 100%;
+            height: 450px;
+            background-color: #111;
+            position: relative;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: invert(90%) hue-rotate(180deg) brightness(80%) contrast(90%); /* Dark mode map filter */
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Khan <span>Auto Detailing</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="mobile-only-btn"><a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Book Now</a></li>
+            </ul>
+
+            <div class="desktop-only-btn">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header reveal">
+        <div class="container">
+            <h1>Contact <span>Us</span></h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #fff;">Have questions? Need a custom quote? Reach out to our team.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info-card reveal">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Our Location</h4>
+                            <p>1234 Detailer's Way<br>Houston, TX 77002</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:8005551234">(800) 555-1234</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:info@khandetailing.com">info@khandetailing.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-container reveal" style="transition-delay: 0.1s;">
+                    <div class="success-message" id="contactSuccess">
+                        Thank you for your message! We will get back to you as soon as possible.
+                    </div>
+                    
+                    <form onsubmit="event.preventDefault(); document.getElementById('contactSuccess').style.display='block'; this.reset();">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required placeholder="Jane Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required placeholder="jane@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required placeholder="Question about Ceramic Coating">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="6" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section reveal">
+        <!-- Google Maps Embed for Houston TX -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.61185590924!2d-95.4012914101237!3d29.758938221876872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer content identical to index.html -->
+                <div class="footer-col reveal">
+                    <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">Khan <span>Auto Detailing</span></a>
+                    <p>Houston's top-tier automotive detailing service. We specialize in paint correction, ceramic coatings, and interior restoration.</p>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#exterior">Exterior Detailing</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Houston, Texas 77002</li>
+                        <li>📞 (800) 555-1234</li>
+                        <li>✉️ info@khandetailing.com</li>
+                        <li class="mt-4" style="color: var(--accent-gold);"><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Khan Auto Detailing Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

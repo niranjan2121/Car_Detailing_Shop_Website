@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Auto Detailing | Professional Car Detailing in Houston, TX</title>
+    <meta name="description" content="Houston's premier auto detailing service. We offer premium interior cleaning, exterior detailing, ceramic coatings, and paint correction to make your car shine.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Inline styles for page-specific elements -->
+    <style>
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(to bottom, rgba(5, 5, 6, 0.4), rgba(5, 5, 6, 0.9)), url('images/hero-bg.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to top, var(--bg-dark), transparent);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        .hero-headline {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .hero-headline span {
+            color: var(--accent-gold);
+        }
+
+        .hero-subhead {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: #e4e4e7;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            background-color: var(--bg-dark);
+            position: relative;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.2rem;
+            font-family: var(--font-sans);
+        }
+        
+        .stat-item p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .intro-image-wrapper {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .intro-image-wrapper img {
+            width: 100%;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .intro-image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Services Preview Section */
+        .services-preview {
+            background-color: var(--bg-darker);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-header h2 {
+            color: var(--accent-gold);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: all var(--transition-normal);
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            background-color: var(--bg-card-hover);
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '"';
+            position: absolute;
+            font-size: 20rem;
+            font-family: var(--font-serif);
+            color: var(--bg-card-hover);
+            top: -50px;
+            left: 5%;
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, var(--bg-card-hover), var(--bg-card));
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #d4d4d8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .testimonial-car {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, rgba(5, 5, 6, 0.9), rgba(5, 5, 6, 0.7)), url('images/ceramic-coating.png') center/cover no-repeat;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Khan <span>Auto Detailing</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only-btn"><a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Book Now</a></li>
+            </ul>
+
+            <div class="desktop-only-btn">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero reveal">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-headline">Perfection in Every <span>Detail.</span></h1>
+                <p class="hero-subhead">Houston's premier luxury auto detailing service. From deep interior cleaning to flawless ceramic coatings, we restore and protect your vehicle.</p>
+                <div class="hero-btns">
+                    <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+                    <a href="services.html" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container intro-grid">
+            <div class="intro-text reveal">
+                <h2>Elevating the Standard of Car Care in Houston</h2>
+                <p>At Khan Auto Detailing, we believe your vehicle deserves the highest level of care. We are not just a car wash; we are automotive appearance specialists dedicated to excellence.</p>
+                <p>Using only the finest premium products and advanced techniques, we remove imperfections, restore brilliance, and protect your investment for years to come.</p>
+                
+                <div class="intro-stats">
+                    <div class="stat-item">
+                        <h4>5+</h4>
+                        <p>Years Exp.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>1k+</h4>
+                        <p>Cars Detailed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <p>Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="intro-image reveal">
+                <div class="intro-image-wrapper">
+                    <img src="images/interior-cleaning.png" alt="Luxury Car Interior Detailed">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Premium Services</h2>
+                <p>Comprehensive detailing and protection packages tailored to your vehicle's specific needs.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">✨</div>
+                    <h3>Exterior Detailing</h3>
+                    <p>Decontamination wash, clay bar treatment, and hand wax to restore your paint's gloss and slickness.</p>
+                    <a href="services.html#exterior" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card reveal" style="transition-delay: 0.1s;">
+                    <div class="service-icon">🧼</div>
+                    <h3>Interior Detail</h3>
+                    <p>Deep steam cleaning, leather conditioning, and thorough vacuuming to make your cabin feel brand new.</p>
+                    <a href="services.html#interior" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card reveal" style="transition-delay: 0.2s;">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Ceramic Coating</h3>
+                    <p>Long-lasting nanoceramic protection against elements, UV rays, and chemical stains with extreme gloss.</p>
+                    <a href="services.html#ceramic" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card reveal" style="transition-delay: 0.3s;">
+                    <div class="service-icon">⚡</div>
+                    <h3>Paint Correction</h3>
+                    <p>Multi-stage machine compounding and polishing to remove swirl marks, scratches, and oxidation.</p>
+                    <a href="services.html#paint" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it. Here is what Houston car owners have to say about our detailing services.</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Absolutely mind-blowing work. My Porsche looks better than the day I bought it from the dealership. The ceramic coating makes washing so easy. Highly recommend Khan Auto Detailing!"</p>
+                    <p class="testimonial-author">Michael T.</p>
+                    <p class="testimonial-car">Porsche 911</p>
+                </div>
+                
+                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"They managed to get coffee stains completely out of my cream leather seats. The interior smells fresh and looks pristine again. Professional and extremely detail-oriented."</p>
+                    <p class="testimonial-author">Sarah L.</p>
+                    <p class="testimonial-car">Range Rover Velar</p>
+                </div>
+                
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Had heavy swirl marks all over my black paint. The paint correction service eliminated them completely. The depth and clarity of the paint now is just unbelievable."</p>
+                    <p class="testimonial-author">David R.</p>
+                    <p class="testimonial-car">BMW M3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="container cta-content">
+            <h2>Ready to Transform Your Vehicle?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fff;">Book your appointment today and experience Houston's premier automotive detailing.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="booking.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Book Now</a>
+                <a href="tel:+18005551234" class="btn btn-outline" style="padding: 1rem 3rem; font-size: 1.1rem; border-color: #fff; color: #fff;">(800) 555-1234</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col reveal">
+                    <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">Khan <span>Auto Detailing</span></a>
+                    <p>Houston's top-tier automotive detailing service. We specialize in paint correction, ceramic coatings, and interior restoration.</p>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#exterior">Exterior Detailing</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Houston, Texas 77002</li>
+                        <li>📞 (800) 555-1234</li>
+                        <li>✉️ info@khandetailing.com</li>
+                        <li class="mt-4" style="color: var(--accent-gold);"><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Khan Auto Detailing Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

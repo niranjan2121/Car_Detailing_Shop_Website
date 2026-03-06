@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Khan Auto Detailing</title>
+    <meta name="description" content="Learn about Khan Auto Detailing, our mission, experts, and the premium products we use to deliver perfection to Houston's car owners.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            background-color: var(--bg-darker);
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            background: linear-gradient(to bottom, rgba(5,5,6,0.9), var(--bg-darker)), url('images/interior-cleaning.png') center/cover no-repeat;
+        }
+
+        .about-section {
+            padding: 6rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 5rem;
+            padding-top: 5rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Khan <span>Auto Detailing</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only-btn"><a href="booking.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Book Now</a></li>
+            </ul>
+
+            <div class="desktop-only-btn">
+                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header reveal">
+        <div class="container">
+            <h1>About <span>Us</span></h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #fff;">Dedicated to perfection. Driven by passion.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-text">
+                    <h2>Our Mission in Houston</h2>
+                    <p>Founded on an obsession with automotive perfection, Khan Auto Detailing recognized a gap in the Houston market for truly premium car care. Most "detailing" shops focus on volume over quality, leaving swirl marks and using cheap, greasy products.</p>
+                    <p>Our mission is simple: to provide an unparalleled level of service and craftsmanship. We treat every vehicle that comes into our bay as if it were our own showroom piece.</p>
+                    <p>Whether you drive a daily commuter or an exotic weekend sports car, our experienced technicians apply the finest techniques, meticulously correcting and protecting your vehicle so you can take pride in your ride.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/hero-bg.png" alt="Showroom car">
+                </div>
+            </div>
+
+            <!-- Focus Areas -->
+            <div class="features reveal">
+                <div class="feature-card">
+                    <div class="icon">🔬</div>
+                    <h3>Premium Products Only</h3>
+                    <p>We source only the highest grade ceramic coatings, compounds, and pH-neutral soaps to ensure safe and stunning results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎓</div>
+                    <h3>Expert Technicians</h3>
+                    <p>Our staff undergoes rigorous continuous training in advanced paint correction and modern detailing techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>We do not rush. We do not skip steps. Your total satisfaction with the final result is our primary objective.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer content identical to index.html -->
+                <div class="footer-col reveal">
+                    <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">Khan <span>Auto Detailing</span></a>
+                    <p>Houston's top-tier automotive detailing service. We specialize in paint correction, ceramic coatings, and interior restoration.</p>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.1s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#exterior">Exterior Detailing</a></li>
+                        <li><a href="services.html#interior">Interior Detailing</a></li>
+                        <li><a href="services.html#ceramic">Ceramic Coating</a></li>
+                        <li><a href="services.html#paint">Paint Correction</a></li>
+                        <li><a href="services.html#headlight">Headlight Restoration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col reveal" style="transition-delay: 0.3s;">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Houston, Texas 77002</li>
+                        <li>📞 (800) 555-1234</li>
+                        <li>✉️ info@khandetailing.com</li>
+                        <li class="mt-4" style="color: var(--accent-gold);"><strong>Mon - Sat:</strong> 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Khan Auto Detailing Service. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
